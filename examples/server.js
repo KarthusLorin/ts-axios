@@ -32,6 +32,10 @@ router.get('/simple/get', function(req, res) {
   })
 })
 
+router.get('/base/get', function(req, res) {
+  res.json(res.query)
+})
+
 app.use(router)
 
 const port = process.env.PORT || 8080
